@@ -48,6 +48,17 @@ public class Driver {
     @OneToMany(mappedBy = "driver")
     private Set<Document> documents;
 
+    @Column(name = "AVATAR")
+    private byte[] avatar;
+
+    public byte[] getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(byte[] avatar) {
+        this.avatar = avatar;
+    }
+
     public Set<Document> getDocuments() {
         return documents;
     }
